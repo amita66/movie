@@ -1,129 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title> MOVIEHUB</title>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial;
-  padding: 0px;
-  background: #f1f1f1;
-}
-.header {
-  padding: 0px;
-  text-align: center;
-  background: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.header h1 {
-  font-size: 30px;
-  height:70px;
-  padding:15px;
-
-}
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
   text-align: center;
-  padding: 10px 10px;
-  text-decoration: none;
+  font-size: 35px;
+  color: white;
 }
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-.leftcolumn {   
+
+/* Create two columns/boxes that floats next to each other */
+nav {
   float: left;
-  width: 75%;
-}
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
   padding: 20px;
 }
 
-.row:after {
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
   content: "";
   display: table;
   clear: both;
 }
-.footer {
+
+/* Style the footer */
+footer {
+  background-color: #777;
   padding: 10px;
   text-align: center;
-  background: #ddd;
-  margin-top: 5px;
+  color: white;
 }
 
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
     width: 100%;
-    padding: 0;
-  }
-}
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
+    height: auto;
   }
 }
 </style>
 </head>
 <body>
 
-<div class="header">
-  <h1>HOLLYWOOD MOVIES</h1>
-</div>
+<header>
+  <h2>Cities</h2>
+</header>
 
-<div class="topnav">
-  <a href="home.html">HOME</a>
-  <a href="#">MOST VIEWED</a>
-  <a href="#">TOP RATING</a>
-  <a href="fav.html">MOST FAVORITE</a>
-</div>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>London</h1>
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+  </article>
+</section>
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <center><h3>MOVIES</h3></center>
-      <div class="fakeimg" style="height:470px;">
-        <img src="">
-		<img src="">
-		<img src="">
-		<img src="">
-		<img src="">
-		<img src="">
-		<img src=""><img src=""><img src=""><img src="">
-      </div>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <center><h3>Popular Movies</h3></center>
-      <div class="fakeimg"><p>
-        <img src="" style="height:200px;width:300px;">
-<img src="">      </p></div>
-      
-    </div>
-  </div>
-</div>
-
-<div class="footer">
-  <a href="https://in.bookmyshow.com/movies"><h2>BOOK MY SHOW</h2></a>
-</div>
+<br><br><br><br><br><br><br><br><br>
+<footer style="background-color: black">
+  <p>Footer</p>
+</footer>
 
 </body>
 </html>
